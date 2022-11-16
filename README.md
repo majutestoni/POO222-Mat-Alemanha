@@ -57,7 +57,8 @@ git commit -m "[feature/maju-1] alterada classe aluno e professor"
 git push
 ```
 - no github terá a solicitação do merge e as alterações feitas
-- posso fazer a code review e aceitar o merge, que será feito na main
+- ficou acordado que o code review será feito na seguinte ordem -> Jonathan faz do Martin, Maju faz do Jonathan e Martin faz da Maju
+- após feito, pode seguir para o merge com a main
 - por isso, ao começar a trabalhar em uma nova branch sempre dar pull na main para atualizar
 
 
