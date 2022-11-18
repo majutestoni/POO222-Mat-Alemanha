@@ -8,6 +8,11 @@ public class Player extends Person {
 	private double weight;
 	private String position;
 	private String currentClub;
+	private int consultasSobre;
+
+	public Player() {
+		super();
+	}
 
 	public Player(String name, LocalDate birthdayDate, String nickname, int numero, double height, double weight,
 			String position, String currentClub) {
@@ -66,7 +71,7 @@ public class Player extends Person {
 				|| position.equals("Right Midfielder") || position.equals("Left Midfielder")
 				|| position.equals("Central Attacking Midfielder") || position.equals("Left Wing")
 				|| position.equals("Right Wing") || position.equals("Center Forward") || position.equals("Striker")) {
-			this.position = position;
+			this.position = position; // fazer classe enum, me chama na sala que te ensino
 		} else {
 			throw new IllegalArgumentException("Digite a posição do jogador");
 		}
@@ -82,6 +87,24 @@ public class Player extends Person {
 		} else {
 			throw new IllegalArgumentException("Digite o clube do jogador");
 		}
+	}
+
+	@Override
+	public String mostrar() {
+		return "";// precisa ser feito
+
+	}
+
+	public Integer getAge() {
+		return null; // precisa fazer o metodo
+	}
+
+	public int getConsultasSobre() {
+		return consultasSobre;
+	}
+
+	public void setConsultasSobre() {
+		this.consultasSobre++;
 	}
 
 }
