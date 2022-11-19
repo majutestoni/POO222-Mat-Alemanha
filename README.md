@@ -6,6 +6,9 @@ Alunos: **Jonathan Ribeiro, Maria Júlia Testoni e Martin Lange de Assis.**
 | Data | Entrega |
 | ------ | ------ |
 | 17/11/2022 | -Composição da equipe -Definição da seleçãoe dados de ao menos 11 jogadores, 3 membros da comissão técnica, 2 dirigentes  –em arquivo texto.  -modelo de classes1UML de seu software-Lista dos conhecimentos de POO a serem desenvolvidos pela equipe(o que é preciso ainda aprender) –em arquivo texto.|
+| 23/11/2022 | -mockup da classe que atende a interface NationalTeamInfos, respondendo todos os métodos, colocado no arquivo .jar conforme especificaçõesabaixo.|
+
+
 
 ## Git
 
