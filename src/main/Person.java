@@ -6,6 +6,10 @@ public abstract class Person {
 	private String name;
 	private LocalDate birthdayDate;
 	private String nickname;
+	
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Person(String name, LocalDate birthdayDate, String nickname) {
 		super();
@@ -13,6 +17,9 @@ public abstract class Person {
 		this.setBirthdayDate(birthdayDate);
 		this.setNickname(nickname);
 	}
+	
+	
+	public abstract String mostrar();
 
 	public String getName() {
 		return name;
