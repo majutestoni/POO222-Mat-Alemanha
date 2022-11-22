@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class PressOfficerContacts extends Person {
 	private String email;
+	// cade o vetor?
 	private String tel1;
 	private String tel2;
 

@@ -10,18 +10,19 @@ import fifa.NationalTeamStats;
 
 public class Team implements NationalTeamInfos {
 	private ArrayList<Player> players = new ArrayList<>();
-	// private ArrayList<> b1 = new ArrayList<>();
-	// private ArrayList<> b2 = new ArrayList<>();
+	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
+	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
 	private Integer consultas;
 
-	private void addConsulta() { // metodo que deve ser chamado toda vez que acontecer uma consulta - fazer melhor quando integrar a outra interface
-		this.consultas++;
+	private void addConsulta() { // metodo que deve ser chamado toda vez que acontecer uma consulta - fazer
+									// melhor quando integrar a outra interface
+		this.consultas++; // talvez alterar para StatedData
 	}
 
 	@Override
 	public int getHowManyMembers() {
 		addConsulta();
-		return players.size(); // + b1.size() + b2.size()
+		return players.size() + pressOfficerContacts.size() + technicalCommittees.size();
 	}
 
 	@Override
@@ -69,7 +70,7 @@ public class Team implements NationalTeamInfos {
 		Player a = new Player();
 		boolean finded = false;
 		int i = 0;
-		while (finded || i == players.size()) { // verificar se while está correto
+		while (finded || i == players.size()) {
 			if (players.get(i).getNumero() == number) {
 				finded = true;
 				a = players.get(i);
@@ -79,15 +80,18 @@ public class Team implements NationalTeamInfos {
 
 		}
 		if (!finded) {
-			// falar com Marcel
-			return "não encontrado";// throw new IllegalArgumentException("Jogador não encontrado");
+			throw new IllegalArgumentException("Jogador não encontrado");
 		}
 		return a.mostrar();
 	}
 
 	@Override
 	public String getPressOfficerContacts() {
-		return null;
+		String apresentar = "";
+		for (PressOfficerContacts a : pressOfficerContacts) {
+			apresentar += a.mostrar();
+		}
+		return apresentar; // precisa ser revisto
 	}
 
 	@Override
