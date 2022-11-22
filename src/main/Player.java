@@ -1,6 +1,7 @@
 package main;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Player extends Person {
 	private int numero;
@@ -96,7 +97,7 @@ public class Player extends Person {
 	}
 
 	public Integer getAge() {
-		return null; // precisa fazer o metodo
+		return Period.between(this.getBirthdayDate(), LocalDate.now()).getYears();
 	}
 
 	public int getConsultasSobre() {
