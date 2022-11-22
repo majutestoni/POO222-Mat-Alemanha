@@ -3,7 +3,6 @@ package main;
 import java.time.LocalDate;
 
 public class PressOfficerContacts extends Person {
-
 	private String email;
 	private String tel1;
 	private String tel2;
@@ -11,9 +10,12 @@ public class PressOfficerContacts extends Person {
 	public PressOfficerContacts(String name, LocalDate birthdayDate, String nickname, String email, String tel1,
 			String tel2) {
 		super(name, birthdayDate, nickname);
-		this.setEmail(email);;
-		this.setTel1(tel1);;
-		this.setTel2(tel2);;
+		this.setEmail(email);
+		;
+		this.setTel1(tel1);
+		;
+		this.setTel2(tel2);
+		;
 	}
 
 	public String getEmail() {
@@ -54,10 +56,8 @@ public class PressOfficerContacts extends Person {
 
 	@Override
 	public String mostrar() {
-		// TODO Auto-generated method stub
-		return null;
+		return "{" + "Name: " + this.getName() + "\n" + "Tel1: " + this.getTel1() + "\n" + "Tel2: " + this.getTel2()
+				+ "\n" + "EmailAccount: " + this.getEmail() + "}";
 	}
-	
-	
-		
+
 }
