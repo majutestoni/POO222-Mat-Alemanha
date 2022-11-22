@@ -1,4 +1,4 @@
-package main;
+package module_alemanha;
 
 import java.awt.Image;
 import java.nio.file.Path;
