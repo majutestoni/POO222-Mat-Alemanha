@@ -53,7 +53,7 @@ public abstract class Person {
 		if (nickname != null && !nickname.isBlank()) {
 			this.nickname = nickname;
 		} else {
-			throw new IllegalArgumentException("Digite o aeplido ou o número do camisa.");
+			throw new IllegalArgumentException("Digite o apelido ou o número do camisa.");
 		}
 	}
 

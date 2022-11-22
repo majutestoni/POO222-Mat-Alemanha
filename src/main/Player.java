@@ -92,8 +92,10 @@ public class Player extends Person {
 
 	@Override
 	public String mostrar() {
-		return "";// precisa ser feito
-
+		return "Number: " + this.getNumero() + "\n" + "Name: " + this.getName() + "\n" + "Nickname: "
+				+ this.getNickname() + "\n" + "Height: " + this.getHeight() + "\n" + "Weight " + this.getWeight() + "\n"
+				+ "BirthDate: " + this.getBirthdayDate() + "\n" + "Position: " + this.getPosition() + "\n"
+				+ "CurrentClub: " + this.getCurrentClub();
 	}
 
 	public Integer getAge() {
