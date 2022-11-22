@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public abstract class Person {
 	private String name;
-	protected LocalDate birthdayDate;
+	private LocalDate birthdayDate;
 	private String nickname;
 	
 	public Person() {

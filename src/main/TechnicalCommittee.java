@@ -25,7 +25,7 @@ public class TechnicalCommittee extends Person {
 	}
 	
 	private int getAge(LocalDate birthdayDate) {
-	    return Period.between(this.birthdayDate, LocalDate.now()).getYears();
+	    return Period.between(this.getBirthdayDate(), LocalDate.now()).getYears();
 	}
 
 }
