@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class TechnicalCommittee extends Person {
-
 	private String function;
 
 	public TechnicalCommittee(String name, LocalDate birthdayDate, String nickname, String function) {
@@ -30,8 +29,8 @@ public class TechnicalCommittee extends Person {
 
 	@Override
 	public String mostrar() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Name: " + this.getName() + "\n" + "Nickname: " + this.getNickname() + "\n" + "Role: "
+				+ this.getFunction() + "\n" + "Age: " + this.getAge();
 
 	}
 }
