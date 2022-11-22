@@ -1,2 +1,0 @@
-module br.com.furb {
-}
