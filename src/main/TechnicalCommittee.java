@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class TechnicalCommittee extends Person {
-	
+
 	private String function;
 
 	public TechnicalCommittee(String name, LocalDate birthdayDate, String nickname, String function) {
@@ -23,9 +23,15 @@ public class TechnicalCommittee extends Person {
 			throw new IllegalArgumentException("Invalid email");
 		}
 	}
-	
-	private int getAge() {
-	    return Period.between(this.getBirthdayDate(), LocalDate.now()).getYears();
+
+	private int getAge(LocalDate birthdayDate) {
+		return Period.between(this.getBirthdayDate(), LocalDate.now()).getYears();
 	}
 
+	@Override
+	public String mostrar() {
+		// TODO Auto-generated method stub
+		return null;
+
+	}
 }

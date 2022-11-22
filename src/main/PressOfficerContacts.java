@@ -51,6 +51,12 @@ public class PressOfficerContacts extends Person {
 			throw new IllegalArgumentException("Invalid number");
 		}
 	}
+
+	@Override
+	public String mostrar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 		
