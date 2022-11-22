@@ -14,7 +14,7 @@ public class Team implements NationalTeamInfos {
 	// private ArrayList<> b2 = new ArrayList<>();
 	private Integer consultas;
 
-	private void addConsulta() { // metodo que deve ser chamado toda vez que acontecer uma consulta
+	private void addConsulta() { // metodo que deve ser chamado toda vez que acontecer uma consulta - fazer melhor quando integrar a outra interface
 		this.consultas++;
 	}
 
@@ -27,8 +27,8 @@ public class Team implements NationalTeamInfos {
 	@Override
 	public int getOldestPlayer() {
 		addConsulta();
-		LocalDate a = LocalDate.now();
-		Player b = new Player("", a, "", 00, 0.00, 0.00, "", "");
+		LocalDate a = players.get(0).getBirthdayDate();
+		Player b = players.get(0);
 		for (Player player : players) {
 			if (player.getBirthdayDate().isBefore(a)) {
 				a = player.getBirthdayDate();
@@ -42,8 +42,8 @@ public class Team implements NationalTeamInfos {
 	@Override
 	public int getYoungestPlayer() {
 		addConsulta();
-		LocalDate a = LocalDate.of(1900, 01, 01);
-		Player b = new Player("", a, "", 00, 0.00, 0.00, "", "");
+		LocalDate a = players.get(0).getBirthdayDate();
+		Player b = players.get(0);
 		for (Player player : players) {
 			if (player.getBirthdayDate().isAfter(a)) {
 				a = player.getBirthdayDate();
@@ -67,21 +67,20 @@ public class Team implements NationalTeamInfos {
 	public String getPlayer(int number) {
 		addConsulta();
 		Player a = new Player();
-		boolean achou = false;
+		boolean finded = false;
 		int i = 0;
-		while (achou || i == players.size()) { // verificar consição do i
+		while (finded || i == players.size()) { // verificar se while está correto
 			if (players.get(i).getNumero() == number) {
-				achou = true;
+				finded = true;
 				a = players.get(i);
-				players.get(i).setConsultasSobre();
 			} else {
 				i++;
 			}
 
 		}
-		if (!achou) {
+		if (!finded) {
 			// falar com Marcel
-			return "não encontrado";// throw new IllegalArgumentException("Jogador não encontrado"); 
+			return "não encontrado";// throw new IllegalArgumentException("Jogador não encontrado");
 		}
 		return a.mostrar();
 	}
