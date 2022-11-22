@@ -32,6 +32,6 @@ public class TechnicalCommittee extends Person {
 	public String mostrar() {
 		// TODO Auto-generated method stub
 		return null;
-	}
 
+	}
 }
