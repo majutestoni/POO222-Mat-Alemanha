@@ -1,14 +1,9 @@
 package module_alemanha;
 
 import java.awt.Image;
-import java.io.File;
-import java.io.FileInputStream;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
-
-import javax.imageio.ImageIO;
-import javax.imageio.stream.ImageOutputStreamImpl;
 
 import fifa.NationalTeamInfos;
 import fifa.NationalTeamStats;
@@ -18,6 +13,19 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
 	private Integer consultas;
+
+	public Alemanha() {
+		LocalDate b = LocalDate.of(2003, 07, 03);
+		Player a = new Player("Martin", b, "Martinho", 10, 1.83, 55, "Atacante", "Bruscão");
+		Player a2 = new Player("joao", b, "jo", 12, 1.70, 60, "Zagueiro", "Bruscão");
+		PressOfficerContacts c = new PressOfficerContacts("Maju", b, "Maju", "majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
+		TechnicalCommittee d = new TechnicalCommittee("Jony", b, "Jony", "massagista");
+
+		players.add(a);
+		players.add(a2);
+		pressOfficerContacts.add(c);
+		technicalCommittees.add(d);
+	}
 
 	private void addConsulta() { // metodo que deve ser chamado toda vez que acontecer uma consulta - fazer
 									// melhor quando integrar a outra interface
