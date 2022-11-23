@@ -12,7 +12,7 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<Player> players = new ArrayList<>();
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
-	private Integer consultas;
+	//private Integer consultas;
 
 	public Alemanha() {
 		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Striker", "Bruscão");
@@ -25,21 +25,22 @@ public class Alemanha implements NationalTeamInfos {
 		pressOfficerContacts.add(c);
 		technicalCommittees.add(d);
 	}
-
+	/*
 	private void addConsulta() { // metodo que deve ser chamado toda vez que acontecer uma consulta - fazer
 									// melhor quando integrar a outra interface
 		this.consultas++; // talvez alterar para StatedData
 	}
+	*/
 
 	@Override
 	public int getHowManyMembers() {
-		addConsulta();
+		//addConsulta();
 		return players.size() + pressOfficerContacts.size() + technicalCommittees.size();
 	}
 
 	@Override
 	public int getOldestPlayer() {
-		addConsulta();
+		//addConsulta();
 		LocalDate a = players.get(0).getBirthdayDate();
 		Player b = players.get(0);
 		for (Player player : players) {
@@ -54,7 +55,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public int getYoungestPlayer() {
-		addConsulta();
+		//addConsulta();
 		LocalDate a = players.get(0).getBirthdayDate();
 		Player b = players.get(0);
 		for (Player player : players) {
@@ -68,7 +69,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public double getAverageAge() {
-		addConsulta();
+		//addConsulta();
 		double contador = 0;
 		for (Player player : players) {
 			contador += player.getAge();
@@ -78,7 +79,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public String getPlayer(int number) {
-		addConsulta();
+		//addConsulta();
 		Player a = new Player();
 		boolean finded = false;
 		int i = 0;
