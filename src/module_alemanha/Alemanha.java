@@ -4,7 +4,6 @@ import java.awt.Image;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
-
 import fifa.NationalTeamInfos;
 import fifa.NationalTeamStats;
 
@@ -12,35 +11,38 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<Player> players = new ArrayList<>();
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
-	//private Integer consultas;
+	private StatedData statedData;
+	// private Integer consultas;
 
 	public Alemanha() {
 		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Striker", "Bruscão");
-		Player a2 = new Player("joao", LocalDate.parse("2003-03-25"), "jo", 12, 1.70, 60, "Striker", "Bruscão");
-		PressOfficerContacts c = new PressOfficerContacts("Maju", LocalDate.parse("2003-03-25"), "Maju", "majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
+		Player b = new Player("joao", LocalDate.parse("2002-10-25"), "jo", 12, 1.70, 60, "Striker", "Bruscão");
+		PressOfficerContacts c = new PressOfficerContacts("Maju", LocalDate.parse("2003-03-25"), "Maju",
+				"majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
 		TechnicalCommittee d = new TechnicalCommittee("Jony", LocalDate.parse("2003-03-25"), "Jony", "massagista");
 
 		players.add(a);
-		players.add(a2);
+		players.add(b);
 		pressOfficerContacts.add(c);
 		technicalCommittees.add(d);
 	}
 	/*
-	private void addConsulta() { // metodo que deve ser chamado toda vez que acontecer uma consulta - fazer
-									// melhor quando integrar a outra interface
-		this.consultas++; // talvez alterar para StatedData
-	}
-	*/
+	 * private void addConsulta() { // metodo que deve ser chamado toda vez que
+	 * acontecer uma consulta - fazer
+	 * // melhor quando integrar a outra interface
+	 * this.consultas++; // talvez alterar para StatedData
+	 * }
+	 */
 
 	@Override
 	public int getHowManyMembers() {
-		//addConsulta();
+		// addConsulta();
 		return players.size() + pressOfficerContacts.size() + technicalCommittees.size();
 	}
 
 	@Override
 	public int getOldestPlayer() {
-		//addConsulta();
+		// addConsulta();
 		LocalDate a = players.get(0).getBirthdayDate();
 		Player b = players.get(0);
 		for (Player player : players) {
@@ -55,7 +57,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public int getYoungestPlayer() {
-		//addConsulta();
+		// addConsulta();
 		LocalDate a = players.get(0).getBirthdayDate();
 		Player b = players.get(0);
 		for (Player player : players) {
@@ -69,7 +71,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public double getAverageAge() {
-		//addConsulta();
+		// addConsulta();
 		double contador = 0;
 		for (Player player : players) {
 			contador += player.getAge();
@@ -79,19 +81,21 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public String getPlayer(int number) {
-		//addConsulta();
+		// addConsulta();
 		Player a = new Player();
 		boolean finded = false;
 		int i = 0;
-		while (finded || i == players.size()) {
-			if (players.get(i).getNumero() == number) {
-				finded = true;
-				a = players.get(i);
-			} else {
-				i++;
-			}
 
+		for (int j = 0; j <= players.size();) {
+			if (players.get(i).getNumero() == number) {
+				a = players.get(j);
+				j = players.size();
+				finded = true;
+			} else {
+				j++;
+			}
 		}
+
 		if (!finded) {
 			throw new IllegalArgumentException("Jogador não encontrado");
 		}
@@ -119,14 +123,12 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public Path getTechnicalCommittee() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public NationalTeamStats getStatsResponsible() {
-		// TODO Auto-generated method stub
-		return null;
+		return statedData;
 	}
 
 }
