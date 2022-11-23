@@ -7,7 +7,8 @@ public class Player extends Person {
 	private int number;
 	private double height;
 	private double weight;
-	private String position;
+//	private String position; 
+	private Position position; // trabalhando com classes Enum
 	private String currentClub;
 	private int consultasSobre;
 
@@ -16,7 +17,7 @@ public class Player extends Person {
 	}
 
 	public Player(String name, LocalDate birthdayDate, String nickname, int number, double height, double weight,
-			String position, String currentClub) {
+			Position position, String currentClub) {
 		super(name, birthdayDate, nickname);
 		this.setNumber(number);
 		this.setHeight(height);
@@ -61,18 +62,20 @@ public class Player extends Person {
 		}
 	}
 
-	public String getPosition() {
+	public Position getPosition() {
 		return position;
 	}
 
-	public void setPosition(String position) {
-		if (position != null && position.equals("Goalkeeper") || position.equals("Central Back")
-				|| position.equals("Right Back") || position.equals("Left Back")
-				|| position.equals("Central Defensive Midfielder") || position.equals("Central Midfielder")
-				|| position.equals("Right Midfielder") || position.equals("Left Midfielder")
-				|| position.equals("Central Attacking Midfielder") || position.equals("Left Wing")
-				|| position.equals("Right Wing") || position.equals("Center Forward") || position.equals("Striker")) {
-			this.position = position; // fazer classe enum, me chama na sala que te ensino
+	public void setPosition(Position position) {
+		if (position.equals(null))
+			//	 && position.equals("Goalkeeper") || position.equals("Central Back")
+			//	|| position.equals("Right Back") || position.equals("Left Back")
+			//	|| position.equals("Central Defensive Midfielder") || position.equals("Central Midfielder")
+			//	|| position.equals("Right Midfielder") || position.equals("Left Midfielder")
+			//	|| position.equals("Central Attacking Midfielder") || position.equals("Left Wing")
+			//	|| position.equals("Right Wing") || position.equals("Center Forward") || position.equals("Striker")) 
+				{
+			this.position = position;
 		} else {
 			throw new IllegalArgumentException("Digite a posição do jogador");
 		}
