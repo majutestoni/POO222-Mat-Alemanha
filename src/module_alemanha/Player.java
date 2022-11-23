@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class Player extends Person {
-	private int numero;
+	private int number;
 	private double height;
 	private double weight;
 	private String position;
@@ -15,23 +15,23 @@ public class Player extends Person {
 		super();
 	}
 
-	public Player(String name, LocalDate birthdayDate, String nickname, int numero, double height, double weight,
+	public Player(String name, LocalDate birthdayDate, String nickname, int number, double height, double weight,
 			String position, String currentClub) {
 		super(name, birthdayDate, nickname);
-		this.setNumero(numero);
+		this.setNumber(number);
 		this.setHeight(height);
 		this.setWeight(weight);
 		this.setPosition(position);
 		this.setCurrentClub(currentClub);
 	}
 
-	public int getNumero() {
-		return numero;
+	public Integer getNumber() {
+		return number;
 	}
 
-	public void setNumero(int numero) {
-		if (numero > 0 && numero < 100) {
-			this.numero = numero;
+	public void setNumber(int number) {
+		if (number > 0 && number < 100) {
+			this.number = number;
 		} else {
 			throw new IllegalArgumentException("Digite um número de 1 a 99");
 		}
@@ -92,7 +92,7 @@ public class Player extends Person {
 
 	@Override
 	public String mostrar() {
-		return "{" + "Number: " + this.getNumero() + "\n" + "Name: " + this.getName() + "\n" + "Nickname: "
+		return "{" + "Number: " + this.getNumber() + "\n" + "Name: " + this.getName() + "\n" + "Nickname: "
 				+ this.getNickname() + "\n" + "Height: " + this.getHeight() + "\n" + "Weight " + this.getWeight() + "\n"
 				+ "BirthDate: " + this.getBirthdayDate() + "\n" + "Position: " + this.getPosition() + "\n"
 				+ "CurrentClub: " + this.getCurrentClub() + "}";
