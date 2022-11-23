@@ -15,11 +15,10 @@ public class Alemanha implements NationalTeamInfos {
 	private Integer consultas;
 
 	public Alemanha() {
-		LocalDate b = LocalDate.of(2003, 07, 03);
-		Player a = new Player("Martin", b, "Martinho", 10, 1.83, 55, "Atacante", "Bruscão");
-		Player a2 = new Player("joao", b, "jo", 12, 1.70, 60, "Zagueiro", "Bruscão");
-		PressOfficerContacts c = new PressOfficerContacts("Maju", b, "Maju", "majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
-		TechnicalCommittee d = new TechnicalCommittee("Jony", b, "Jony", "massagista");
+		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Atacante", "Bruscão");
+		Player a2 = new Player("joao", LocalDate.parse("2003-03-25"), "jo", 12, 1.70, 60, "Zagueiro", "Bruscão");
+		PressOfficerContacts c = new PressOfficerContacts("Maju", LocalDate.parse("2003-03-25"), "Maju", "majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
+		TechnicalCommittee d = new TechnicalCommittee("Jony", LocalDate.parse("2003-03-25"), "Jony", "massagista");
 
 		players.add(a);
 		players.add(a2);
