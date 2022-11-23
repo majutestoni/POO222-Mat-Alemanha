@@ -1,14 +1,19 @@
 package module_alemanha;
 
 import java.awt.Image;
+import java.io.File;
+import java.io.FileInputStream;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import javax.imageio.ImageIO;
+import javax.imageio.stream.ImageOutputStreamImpl;
+
 import fifa.NationalTeamInfos;
 import fifa.NationalTeamStats;
 
-public class Team implements NationalTeamInfos {
+public class Alemanha implements NationalTeamInfos {
 	private ArrayList<Player> players = new ArrayList<>();
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
@@ -101,7 +106,6 @@ public class Team implements NationalTeamInfos {
 
 	@Override
 	public Image getFlagImage() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
