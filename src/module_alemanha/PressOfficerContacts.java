@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 public class PressOfficerContacts extends Person {
 	private String email;
-	// cade o vetor?
 	private String tel1;
 	private String tel2;
 
@@ -12,11 +11,8 @@ public class PressOfficerContacts extends Person {
 			String tel2) {
 		super(name, birthdayDate, nickname);
 		this.setEmail(email);
-		;
 		this.setTel1(tel1);
-		;
 		this.setTel2(tel2);
-		;
 	}
 
 	public String getEmail() {
