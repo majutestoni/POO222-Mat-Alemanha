@@ -144,6 +144,8 @@ public class Alemanha implements NationalTeamInfos {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		// getAbsolutePath()
 		return arquivo.toPath();
 	}
 
