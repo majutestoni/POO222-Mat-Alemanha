@@ -1,6 +1,10 @@
 package module_alemanha;
 
 import java.awt.Image;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -15,7 +19,8 @@ public class Alemanha implements NationalTeamInfos {
 	// private Integer consultas;
 
 	public Alemanha() {
-		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, Position.Goalkeeper, "Bruscão");
+		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, Position.Goalkeeper,
+				"Bruscão");
 		Player b = new Player("joao", LocalDate.parse("2002-10-25"), "jo", 12, 1.70, 60, Position.Striker, "Bruscão");
 		PressOfficerContacts c = new PressOfficerContacts("Maju", LocalDate.parse("2003-03-25"), "Maju",
 				"majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
@@ -28,10 +33,8 @@ public class Alemanha implements NationalTeamInfos {
 	}
 	/*
 	 * private void addConsulta() { // metodo que deve ser chamado toda vez que
-	 * acontecer uma consulta - fazer
-	 * // melhor quando integrar a outra interface
-	 * this.consultas++; // talvez alterar para StatedData
-	 * }
+	 * acontecer uma consulta - fazer // melhor quando integrar a outra interface
+	 * this.consultas++; // talvez alterar para StatedData }
 	 */
 
 	@Override
@@ -121,9 +124,27 @@ public class Alemanha implements NationalTeamInfos {
 		return null;
 	}
 
+	// metodo precisa ser testado
 	@Override
 	public Path getTechnicalCommittee() {
-		return null;
+		FileWriter fileWriter = null;
+		File arquivo = new File("teste.txt");
+		try {
+			arquivo.createNewFile();
+			fileWriter = new FileWriter(arquivo); 
+			BufferedWriter writer = new BufferedWriter(fileWriter);
+			for (TechnicalCommittee b : technicalCommittees) {
+				fileWriter.write(b.mostrar());
+				writer.write(b.mostrar());
+				writer.newLine();
+			}
+			fileWriter.close();
+			writer.close();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return arquivo.toPath();
 	}
 
 	@Override
