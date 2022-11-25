@@ -39,12 +39,12 @@ git pull
 > usaremos um padrão feature/seunome-numero++
 
 ```sh
-git checkout -b feature/maju-1
+git checkout -b maju-1
 ```
 
 - para mudar de branch
 ```sh
-git checkout feature/maju-1
+git checkout maju-1
 ```
 ```sh
 git checkout main
@@ -55,7 +55,7 @@ git add.
 ```
 > padrão do commit "[branch] o que foi feito"
 ```sh
-git commit -m "[feature/maju-1] alterada classe aluno e professor"
+git commit -m "alterada classe aluno e professor"
 ```
 ```sh
 git push
