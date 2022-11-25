@@ -36,7 +36,7 @@ git pull
 
 - criando branch
 
-> usaremos um padrão feature/seunome-numero++
+> usaremos um padrão seunome-numero++
 
 ```sh
 git checkout -b maju-1
