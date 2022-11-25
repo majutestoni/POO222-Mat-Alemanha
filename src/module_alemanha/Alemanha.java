@@ -84,6 +84,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public String getPlayer(int number) {
+		number = 10;
 		// addConsulta();
 		Player a = new Player();
 		boolean finded = false;
