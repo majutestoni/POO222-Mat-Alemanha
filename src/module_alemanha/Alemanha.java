@@ -16,7 +16,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	public Alemanha() {
 		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Striker", "Bruscão");
-		Player b = new Player("joao", LocalDate.parse("2002-10-25"), "jo", 12, 1.70, 60, "Striker", "Bruscão");
+		Player b = new Player("joao", LocalDate.parse("2002-10-25"), "jo", 1, 1.70, 60, "Striker", "Bruscão");
 		PressOfficerContacts c = new PressOfficerContacts("Maju", LocalDate.parse("2003-03-25"), "Maju",
 				"majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
 		TechnicalCommittee d = new TechnicalCommittee("Jony", LocalDate.parse("2003-03-25"), "Jony", "massagista");
