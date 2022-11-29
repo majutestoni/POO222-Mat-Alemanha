@@ -19,7 +19,7 @@ public class StatedData implements NationalTeamStats {
 
 		for (Player player : players) {
 			if (player.getNumber() == number) {
-				ok = player.getConsultasSobre();
+				ok = player.getQueryAbout();
 				finded = true;
 			}
 		}

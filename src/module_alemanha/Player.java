@@ -9,7 +9,7 @@ public class Player extends Person {
 	private double weight;
 	private String position;
 	private String currentClub;
-	private int consultasSobre;
+	private int queryAbout;
 
 	public Player() {
 		super();
@@ -102,12 +102,12 @@ public class Player extends Person {
 		return Period.between(this.getBirthdayDate(), LocalDate.now()).getYears();
 	}
 
-	public int getConsultasSobre() {
-		return consultasSobre;
+	public int getQueryAbout() {
+		return queryAbout;
 	}
 
-	public void setConsultasSobre() {
-		this.consultasSobre++;
+	public void setQueryAbout() {
+		this.queryAbout++;
 	}
 
 }
