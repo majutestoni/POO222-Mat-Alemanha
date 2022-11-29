@@ -18,9 +18,8 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<Player> players = new ArrayList<>();
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
-	private StatedData statedData;
+	private StatedData statedData = null;
 	private Image flagImage;
-	// private Integer consultas;
 
 	public Alemanha() {
 		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Striker", "Bruscão");
@@ -34,22 +33,18 @@ public class Alemanha implements NationalTeamInfos {
 		players.add(b);
 		pressOfficerContacts.add(c);
 		technicalCommittees.add(d);
+		statedData = new StatedData(players);
 	}
-	/*
-	 * private void addConsulta() { // metodo que deve ser chamado toda vez que
-	 * acontecer uma consulta - fazer // melhor quando integrar a outra interface
-	 * this.consultas++; // talvez alterar para StatedData }
-	 */
 
 	@Override
 	public int getHowManyMembers() {
-		// addConsulta();
+		statedData.setQuestions();
 		return players.size() + pressOfficerContacts.size() + technicalCommittees.size();
 	}
 
 	@Override
 	public int getOldestPlayer() {
-		// addConsulta();
+		statedData.setQuestions();
 		LocalDate a = players.get(0).getBirthdayDate();
 		Player b = players.get(0);
 		for (Player player : players) {
@@ -64,7 +59,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public int getYoungestPlayer() {
-		// addConsulta();
+		statedData.setQuestions();
 		LocalDate a = players.get(0).getBirthdayDate();
 		Player b = players.get(0);
 		for (Player player : players) {
@@ -78,7 +73,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public double getAverageAge() {
-		// addConsulta();
+		statedData.setQuestions();
 		double contador = 0;
 		for (Player player : players) {
 			contador += player.getAge();
@@ -89,7 +84,7 @@ public class Alemanha implements NationalTeamInfos {
 	@Override
 	public String getPlayer(int number) {
 		number = 10;
-		// addConsulta();
+		statedData.setQuestions();
 		Player a = new Player();
 		boolean finded = false;
 
@@ -109,20 +104,23 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public String getPressOfficerContacts() {
+		statedData.setQuestions();
 		String apresentar = "";
 		for (PressOfficerContacts a : pressOfficerContacts) {
 			apresentar += a.mostrar();
 		}
-		return apresentar; // precisa ser revisto
+		return apresentar;
 	}
 
 	@Override
 	public String getCountryName() {
+		statedData.setQuestions();
 		return "Alemanha";
 	}
 
 	@Override
 	public Image getFlagImage() {
+		statedData.setQuestions();
 		try {
 			BufferedImage image = ImageIO.read(getClass().getResource("/image/bandeira-alemanha.png"));
 			flagImage = image;
@@ -132,28 +130,28 @@ public class Alemanha implements NationalTeamInfos {
 		return flagImage;
 	}
 
-	// metodo precisa ser testado
 	@Override
 	public Path getTechnicalCommittee() {
-		String nomeSaida = System.getProperty("user.home") + "\\Documents\\dados.txt";
+		statedData.setQuestions();
+		String nomeSaida = "C:";
 		FileWriter fileWriter = null;
 		File file = null;
 		try {
 			file = new File(nomeSaida);
-			fileWriter = new FileWriter(file); 
+			fileWriter = new FileWriter(file);
 
 			for (TechnicalCommittee b : technicalCommittees) {
 				fileWriter.write(b.mostrar());
 				fileWriter.write("\n");
 			}
 			fileWriter.close();
-			
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		return file.toPath();
+		// return file.toPath();
+		return null;
 	}
 
 	@Override
