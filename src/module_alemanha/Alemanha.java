@@ -4,12 +4,13 @@ import java.awt.Image;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-//import javax.imageio.ImageIO;
+import javax.imageio.ImageIO;
 
 import fifa.NationalTeamInfos;
 import fifa.NationalTeamStats;
@@ -19,7 +20,7 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
 	private StatedData statedData;
-	// private Image flagImage;
+	private Image flagImage;
 	// private Integer consultas;
 
 	public Alemanha() {
@@ -123,14 +124,13 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public Image getFlagImage() {
-		/*
-		 * try { File imagePath = new File("/image/bandeira-alemanha.png");
-		 * BufferedImage image = ImageIO.read(imagePath); flagImage = image;
-		 * 
-		 * } catch (IOException e) { e.printStackTrace(); }
-		 */
-
-		return null;
+		try {
+			BufferedImage image = ImageIO.read(getClass().getResource("/image/bandeira-alemanha.png"));
+			flagImage = image;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return flagImage;
 	}
 
 	// metodo precisa ser testado
