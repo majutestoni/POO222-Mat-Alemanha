@@ -135,7 +135,7 @@ public class Alemanha implements NationalTeamInfos {
 	// metodo precisa ser testado
 	@Override
 	public Path getTechnicalCommittee() {
-		String nomeSaida = "C:";
+		String nomeSaida = System.getProperty("user.home") + "\\Documents\\dados.txt";
 		FileWriter fileWriter = null;
 		File file = null;
 		try {
