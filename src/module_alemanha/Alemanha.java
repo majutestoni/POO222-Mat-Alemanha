@@ -1,7 +1,6 @@
 package module_alemanha;
 
 import java.awt.Image;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.awt.image.BufferedImage;
