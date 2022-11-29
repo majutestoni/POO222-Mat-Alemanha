@@ -18,7 +18,7 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
 	private StatedData statedData;
-	//private Image flagImage;
+	// private Image flagImage;
 	// private Integer consultas;
 
 	public Alemanha() {
@@ -90,13 +90,10 @@ public class Alemanha implements NationalTeamInfos {
 		Player a = new Player();
 		boolean finded = false;
 
-		for (int j = 0; j <= players.size();) {
-			if (players.get(j).getNumber() == number) {
-				a = players.get(j);
-				j = players.size();
+		for (Player player : players) {
+			if (player.getNumber() == number) {
+				a = player;
 				finded = true;
-			} else {
-				j++;
 			}
 		}
 
@@ -122,14 +119,12 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public Image getFlagImage() {
-		/*try {
-			File imagePath = new File("/image/bandeira-alemanha.png");
-			BufferedImage image = ImageIO.read(imagePath);
-			flagImage = image;
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}*/
+		/*
+		 * try { File imagePath = new File("/image/bandeira-alemanha.png");
+		 * BufferedImage image = ImageIO.read(imagePath); flagImage = image;
+		 * 
+		 * } catch (IOException e) { e.printStackTrace(); }
+		 */
 
 		return null;
 	}
