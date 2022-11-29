@@ -128,26 +128,26 @@ public class Alemanha implements NationalTeamInfos {
 	// metodo precisa ser testado
 	@Override
 	public Path getTechnicalCommittee() {
+		String nomeSaida = "C:";
 		FileWriter fileWriter = null;
-		File arquivo = new File("teste.txt");
+		File file = null;
 		try {
-			arquivo.createNewFile();
-			fileWriter = new FileWriter(arquivo); 
-			BufferedWriter writer = new BufferedWriter(fileWriter);
+			file = new File(nomeSaida);
+			fileWriter = new FileWriter(file); 
+
 			for (TechnicalCommittee b : technicalCommittees) {
 				fileWriter.write(b.mostrar());
-				writer.write(b.mostrar());
-				writer.newLine();
+				fileWriter.write("\n");
 			}
 			fileWriter.close();
-			writer.close();
+			
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		// getAbsolutePath()
-		return arquivo.toPath();
+
+		//return file.toPath();
+		return null;
 	}
 
 	@Override
