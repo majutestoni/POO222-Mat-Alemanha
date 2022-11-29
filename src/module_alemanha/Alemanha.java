@@ -153,8 +153,7 @@ public class Alemanha implements NationalTeamInfos {
 			e.printStackTrace();
 		}
 
-		//return file.toPath();
-		return null;
+		return file.toPath();
 	}
 
 	@Override
