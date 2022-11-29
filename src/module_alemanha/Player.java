@@ -7,17 +7,16 @@ public class Player extends Person {
 	private int number;
 	private double height;
 	private double weight;
-//	private String position; 
-	private Position position; // trabalhando com classes Enum
+	private String position;
 	private String currentClub;
-	private int consultasSobre;
+	private int queryAbout;
 
 	public Player() {
 		super();
 	}
 
 	public Player(String name, LocalDate birthdayDate, String nickname, int number, double height, double weight,
-			Position position, String currentClub) {
+			String position, String currentClub) {
 		super(name, birthdayDate, nickname);
 		this.setNumber(number);
 		this.setHeight(height);
@@ -62,20 +61,18 @@ public class Player extends Person {
 		}
 	}
 
-	public Position getPosition() {
+	public String getPosition() {
 		return position;
 	}
 
-	public void setPosition(Position position) {
-		if (position.equals(null))
-			//	 && position.equals("Goalkeeper") || position.equals("Central Back")
-			//	|| position.equals("Right Back") || position.equals("Left Back")
-			//	|| position.equals("Central Defensive Midfielder") || position.equals("Central Midfielder")
-			//	|| position.equals("Right Midfielder") || position.equals("Left Midfielder")
-			//	|| position.equals("Central Attacking Midfielder") || position.equals("Left Wing")
-			//	|| position.equals("Right Wing") || position.equals("Center Forward") || position.equals("Striker")) 
-				{
-			this.position = position;
+	public void setPosition(String position) {
+		if (position != null && position.equals("Goalkeeper") || position.equals("Central Back")
+				|| position.equals("Right Back") || position.equals("Left Back")
+				|| position.equals("Central Defensive Midfielder") || position.equals("Central Midfielder")
+				|| position.equals("Right Midfielder") || position.equals("Left Midfielder")
+				|| position.equals("Central Attacking Midfielder") || position.equals("Left Wing")
+				|| position.equals("Right Wing") || position.equals("Center Forward") || position.equals("Striker")) {
+			this.position = position; // fazer classe enum, me chama na sala que te ensino
 		} else {
 			throw new IllegalArgumentException("Digite a posição do jogador");
 		}
@@ -105,12 +102,12 @@ public class Player extends Person {
 		return Period.between(this.getBirthdayDate(), LocalDate.now()).getYears();
 	}
 
-	public int getConsultasSobre() {
-		return consultasSobre;
+	public int getQueryAbout() {
+		return queryAbout;
 	}
 
-	public void setConsultasSobre() {
-		this.consultasSobre++;
+	public void setQueryAbout() {
+		this.queryAbout++;
 	}
 
 }

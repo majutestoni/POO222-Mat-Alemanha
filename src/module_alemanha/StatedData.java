@@ -13,18 +13,14 @@ public class StatedData implements NationalTeamStats {
 	}
 
 	@Override
-	public String getHowManyCallsToPlayer(int number) {
-		String ok = "";
+	public int getHowManyCallsToPlayer(int number) {
+		int ok = 0;
 		boolean finded = false;
-		int i = 0;
 
-		for (int j = 0; j <= players.size();) {
-			if (players.get(i).getNumber() == number) {
-				ok = players.get(j).getNumber().toString();
-				j = players.size();
+		for (Player player : players) {
+			if (player.getNumber() == number) {
+				ok = player.getQueryAbout();
 				finded = true;
-			} else {
-				j++;
 			}
 		}
 

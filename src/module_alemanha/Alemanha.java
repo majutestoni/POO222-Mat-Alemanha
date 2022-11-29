@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
+
+//import javax.imageio.ImageIO;
+
 import fifa.NationalTeamInfos;
 import fifa.NationalTeamStats;
 
@@ -16,12 +19,13 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
 	private StatedData statedData;
+	// private Image flagImage;
 	// private Integer consultas;
 
 	public Alemanha() {
-		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, Position.Goalkeeper,
-				"Bruscão");
-		Player b = new Player("joao", LocalDate.parse("2002-10-25"), "jo", 12, 1.70, 60, Position.Striker, "Bruscão");
+		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Striker", "Bruscão");
+		Player b = new Player("joao", LocalDate.parse("2002-10-25"), "jo", 1, 1.70, 60, "Striker", "Bruscão");
+
 		PressOfficerContacts c = new PressOfficerContacts("Maju", LocalDate.parse("2003-03-25"), "Maju",
 				"majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
 		TechnicalCommittee d = new TechnicalCommittee("Jony", LocalDate.parse("2003-03-25"), "Jony", "massagista");
@@ -88,15 +92,12 @@ public class Alemanha implements NationalTeamInfos {
 		// addConsulta();
 		Player a = new Player();
 		boolean finded = false;
-		int i = 0;
 
-		for (int j = 0; j <= players.size();) {
-			if (players.get(i).getNumber() == number) {
-				a = players.get(j);
-				j = players.size();
+		for (Player player : players) {
+			if (player.getNumber() == number) {
+				a = player;
+				player.setQueryAbout();
 				finded = true;
-			} else {
-				j++;
 			}
 		}
 
@@ -122,6 +123,13 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public Image getFlagImage() {
+		/*
+		 * try { File imagePath = new File("/image/bandeira-alemanha.png");
+		 * BufferedImage image = ImageIO.read(imagePath); flagImage = image;
+		 * 
+		 * } catch (IOException e) { e.printStackTrace(); }
+		 */
+
 		return null;
 	}
 
