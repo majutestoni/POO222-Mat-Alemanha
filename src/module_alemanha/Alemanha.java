@@ -1,6 +1,8 @@
 package module_alemanha;
 
 import java.awt.Image;
+import java.io.File;
+import java.io.FileWriter;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -23,6 +25,7 @@ public class Alemanha implements NationalTeamInfos {
 	public Alemanha() {
 		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Striker", "Bruscão");
 		Player b = new Player("joao", LocalDate.parse("2002-10-25"), "jo", 1, 1.70, 60, "Striker", "Bruscão");
+
 		PressOfficerContacts c = new PressOfficerContacts("Maju", LocalDate.parse("2003-03-25"), "Maju",
 				"majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
 		TechnicalCommittee d = new TechnicalCommittee("Jony", LocalDate.parse("2003-03-25"), "Jony", "massagista");
@@ -85,6 +88,7 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public String getPlayer(int number) {
+		number = 10;
 		// addConsulta();
 		Player a = new Player();
 		boolean finded = false;
@@ -128,8 +132,28 @@ public class Alemanha implements NationalTeamInfos {
 		return flagImage;
 	}
 
+	// metodo precisa ser testado
 	@Override
 	public Path getTechnicalCommittee() {
+		String nomeSaida = "C:";
+		FileWriter fileWriter = null;
+		File file = null;
+		try {
+			file = new File(nomeSaida);
+			fileWriter = new FileWriter(file); 
+
+			for (TechnicalCommittee b : technicalCommittees) {
+				fileWriter.write(b.mostrar());
+				fileWriter.write("\n");
+			}
+			fileWriter.close();
+			
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		//return file.toPath();
 		return null;
 	}
 
