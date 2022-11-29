@@ -16,15 +16,11 @@ public class StatedData implements NationalTeamStats {
 	public String getHowManyCallsToPlayer(int number) {
 		String ok = "";
 		boolean finded = false;
-		int i = 0;
 
-		for (int j = 0; j <= players.size();) {
-			if (players.get(i).getNumber() == number) {
-				ok = players.get(j).getNumber().toString();
-				j = players.size();
+		for (Player player : players) {
+			if (player.getNumber() == number) {
+				ok = player.getConsultasSobre();
 				finded = true;
-			} else {
-				j++;
 			}
 		}
 
