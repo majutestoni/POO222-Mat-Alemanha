@@ -5,7 +5,20 @@ import java.util.ArrayList;
 import fifa.NationalTeamStats;
 
 public class StatedData implements NationalTeamStats {
-	private ArrayList<Player> players = new ArrayList<>();
+	private ArrayList<Player> players;
+	private int questions = 0;
+
+	public StatedData(ArrayList<Player> players) {
+		this.players = players;
+	}
+
+	public void setQuestions() {
+		this.questions++;
+	}
+
+	public int getQuestions() {
+		return questions;
+	}
 
 	@Override
 	public int getHowManyQuestions() {
