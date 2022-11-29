@@ -92,7 +92,7 @@ public class Alemanha implements NationalTeamInfos {
 		int i = 0;
 
 		for (int j = 0; j <= players.size();) {
-			if (players.get(i).getNumber() == number) {
+			if (players.get(j).getNumber() == number) {
 				a = players.get(j);
 				j = players.size();
 				finded = true;
