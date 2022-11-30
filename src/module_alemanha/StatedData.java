@@ -22,7 +22,7 @@ public class StatedData implements NationalTeamStats {
 
 	@Override
 	public int getHowManyQuestions() {
-		return 0;
+		return getQuestions();
 	}
 
 	@Override
