@@ -2,11 +2,13 @@
 Time: **Alemanha**
 Alunos: **Jonathan Ribeiro, Maria Júlia Testoni e Martin Lange de Assis.**
 
-### Features
+### Features (ou melhor, Marco's)
 | Data | Entrega |
 | ------ | ------ |
 | 17/11/2022 | -Composição da equipe -Definição da seleçãoe dados de ao menos 11 jogadores, 3 membros da comissão técnica, 2 dirigentes  –em arquivo texto.  -modelo de classes1UML de seu software-Lista dos conhecimentos de POO a serem desenvolvidos pela equipe(o que é preciso ainda aprender) –em arquivo texto.|
 | 23/11/2022 | -mockup da classe que atende a interface NationalTeamInfos, respondendo todos os métodos, colocado no arquivo .jar conforme especificaçõesabaixo.|
+| 30/11/2022 | -mockup da classe que atende a interface NationalTeamStats, respondendo todos os métodos, colocado no arquivo .jar conforme especificações abaixo. |
+| 07/12/2022 | -módulo completoem formato .jar (bytecode) |
 
 
 
@@ -35,26 +37,26 @@ git pull
 
 - criando branch
 
-> usaremos um padrão feature/seunome-numero++
+> usaremos um padrão seunome-numero++
 
 ```sh
-git checkout -b feature/maju-1
+git checkout -b maju-1
 ```
 
 - para mudar de branch
 ```sh
-git checkout feature/maju-1
+git checkout maju-1
 ```
 ```sh
 git checkout main
 ```
 - após fazer as alterações desejadas e queira unir ao projeto
 ```sh
-git add.
+git add .
 ```
 > padrão do commit "[branch] o que foi feito"
 ```sh
-git commit -m "[feature/maju-1] alterada classe aluno e professor"
+git commit -m "alterada classe aluno e professor"
 ```
 ```sh
 git push

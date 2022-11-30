@@ -1,4 +1,4 @@
-package main;
+package module_alemanha;
 
 import java.time.LocalDate;
 
@@ -11,11 +11,8 @@ public class PressOfficerContacts extends Person {
 			String tel2) {
 		super(name, birthdayDate, nickname);
 		this.setEmail(email);
-		;
 		this.setTel1(tel1);
-		;
 		this.setTel2(tel2);
-		;
 	}
 
 	public String getEmail() {
@@ -56,8 +53,8 @@ public class PressOfficerContacts extends Person {
 
 	@Override
 	public String mostrar() {
-		return "{" + "Name: " + this.getName() + "\n" + "Tel1: " + this.getTel1() + "\n" + "Tel2: " + this.getTel2()
-				+ "\n" + "EmailAccount: " + this.getEmail() + "}";
+		return "\n" + "{" + "\n" + "     \"Name\" " + ": " + this.getName() + ", " + "\n" + "     \"Tel1\" " + ": " + this.getTel1() + ", " + "\n"
+				+ "     \"Tel2\" " + ": " + this.getTel2() + ", " + "\n" + "     \"EmailAccount\" " + ": " + this.getEmail() + "\n" + "}" + "\n";
 	}
 
 }

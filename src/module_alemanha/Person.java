@@ -1,4 +1,4 @@
-package main;
+package module_alemanha;
 
 import java.time.LocalDate;
 
@@ -8,7 +8,6 @@ public abstract class Person {
 	private String nickname;
 	
 	public Person() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Person(String name, LocalDate birthdayDate, String nickname) {
