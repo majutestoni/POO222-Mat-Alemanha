@@ -19,7 +19,7 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
 	private StatedData statedData = null;
-	//private Image flagImage;
+	// private Image flagImage;
 
 	public Alemanha() {
 		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Striker", "Bruscão");
@@ -120,21 +120,19 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public Image getFlagImage() {
-		/*statedData.setQuestions();
-		try {
-			BufferedImage image = ImageIO.read(getClass().getResource("/image/bandeira-alemanha.png"));
-			flagImage = image;
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return flagImage;*/
+		/*
+		 * statedData.setQuestions(); try { BufferedImage image =
+		 * ImageIO.read(getClass().getResource("/image/bandeira-alemanha.png"));
+		 * flagImage = image; } catch (IOException e) { e.printStackTrace(); } return
+		 * flagImage;
+		 */
 		return null;
 	}
 
 	@Override
 	public Path getTechnicalCommittee() {
 		statedData.setQuestions();
-		String nomeSaida = "C:";
+		String nomeSaida = System.getProperty("user.home") + "\\Documents\\dados.txt";
 		FileWriter fileWriter = null;
 		File file = null;
 		try {
@@ -151,8 +149,7 @@ public class Alemanha implements NationalTeamInfos {
 			e.printStackTrace();
 		}
 
-		// return file.toPath();
-		return null;
+		return file.toPath();
 	}
 
 	@Override
