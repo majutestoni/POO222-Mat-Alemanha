@@ -3,13 +3,13 @@ package module_alemanha;
 import java.awt.Image;
 import java.io.File;
 import java.io.FileWriter;
-//import java.awt.image.BufferedImage;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-//import javax.imageio.ImageIO;
+import javax.imageio.ImageIO;
 
 import fifa.NationalTeamInfos;
 import fifa.NationalTeamStats;
@@ -19,7 +19,7 @@ public class Alemanha implements NationalTeamInfos {
 	private ArrayList<PressOfficerContacts> pressOfficerContacts = new ArrayList<>();
 	private ArrayList<TechnicalCommittee> technicalCommittees = new ArrayList<>();
 	private StatedData statedData = null;
-	// private Image flagImage;
+	private Image flagImage;
 
 	public Alemanha() {
 		Player a = new Player("Martin", LocalDate.parse("2003-03-25"), "Martinho", 10, 1.83, 55, "Striker", "Bruscão");
@@ -120,13 +120,14 @@ public class Alemanha implements NationalTeamInfos {
 
 	@Override
 	public Image getFlagImage() {
-		/*
-		 * statedData.setQuestions(); try { BufferedImage image =
-		 * ImageIO.read(getClass().getResource("/image/bandeira-alemanha.png"));
-		 * flagImage = image; } catch (IOException e) { e.printStackTrace(); } return
-		 * flagImage;
-		 */
-		return null;
+		statedData.setQuestions();
+		try {
+			BufferedImage image = ImageIO.read(getClass().getResource("image/bandeira-alemanha.png"));
+			flagImage = image;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return flagImage;
 	}
 
 	@Override
