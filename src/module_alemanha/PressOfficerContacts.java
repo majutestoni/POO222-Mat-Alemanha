@@ -53,8 +53,8 @@ public class PressOfficerContacts extends Person {
 
 	@Override
 	public String mostrar() {
-		return "{" + "Name: " + this.getName() + "\n" + "Tel1: " + this.getTel1() + "\n" + "Tel2: " + this.getTel2()
-				+ "\n" + "EmailAccount: " + this.getEmail() + "}";
+		return "\n" + "{" + "Name " + ":" + this.getName() + ", " + "\n" + "Tel1 " + ":" + this.getTel1() + ", " + "\n"
+				+ "Tel2 " + ":" + this.getTel2() + ", " + "\n" + "EmailAccount " + ":" + this.getEmail() + ", " + "}" + "\n";
 	}
 
 }
