@@ -1,0 +1,61 @@
+----Comissão Técnica Alemanha para Copa do Mundo FIFA 2022----
+
+//Hansi Flick
+Name: Hans-Dieter Flick;
+Nickname: Hansi Flick;
+Role: Main coach;
+BirthDate: 24/02/1965
+
+//Marcus Sorg
+Name: Marcus Sorg;
+Nickname: Marcus Sorg;
+Role: Assistant coach;
+BirthDate: 24/12/1965
+
+//Danny Röhl
+Name: Danny Röhl;
+Nickname: Danny Röhl;
+Role: Assistant coach;
+BirthDate: 28/04/1989
+
+//Andreas Kronenberg
+Name: Andreas Kronenberg;
+Nickname: Andreas Kronenberg;
+Role: Goalkeeper coach;
+BirthDate: 10/09/1974
+
+//Michael Fuchs
+Name: Michael Fuchs;
+Nickname: Michael Fuchs;
+Role: Goalkeeper coach;
+BirthDate: 04/01/1970
+
+//Mads Buttgereit
+Name: Mads Buttgereit;
+Nickname: Mads Buttgereit;
+Role: Standard Coach;
+BirthDate: 03/06/1985
+
+//Nicklas Dietrich
+Name: Nicklas Dietrich;
+Nickname: Nicklas Dietrich;
+Role: Athletic Trainer;
+BirthDate: 13/12/1982
+
+//Krunoslav Banovcic
+Name: Krunoslav Banovcic;
+Nickname: Krunoslav Banovcic;
+Role: Athletic Trainer;
+BirthDate: 10/09/1974
+
+//Dr. Stephan Nopp
+Name: Stephan Nopp;
+Nickname: Stephan Nopp;
+Role: Co-Trainer Match Analysis;
+BirthDate: 24/08/1979
+
+//Oliver Bierhoff
+Name: Oliver Bierhoff;
+Nickname: Oliver Bierhoff;
+Role: Managing Director National Teams and Academy;
+BirthDate: 01/05/1968
