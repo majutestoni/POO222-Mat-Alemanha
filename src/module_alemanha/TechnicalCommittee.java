@@ -29,8 +29,8 @@ public class TechnicalCommittee extends Person {
 
 	@Override
 	public String mostrar() {
-		return "\n" + "{" + "Name " + ":" + this.getName() + ", " + "\n" + "Nickname " + ":" + this.getNickname() + ", " + "\n"
-				+ "Role " + ":" + this.getFunction() + ", " + "\n" + "Age " + ":" + this.getAge() + ", " + "}" + "\n";
+		return "\n" + "{" + "\n" + "Name " + ": " + this.getName() + ", " + "\n" + "Nickname " + ": " + this.getNickname() + ", " + "\n"
+				+ "Role " + ": " + this.getFunction() + ", " + "\n" + "Age " + ": " + this.getAge() + "\n" + "}" + "\n";
 
 	}
 }

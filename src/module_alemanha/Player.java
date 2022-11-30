@@ -92,11 +92,11 @@ public class Player extends Person {
 
 	@Override
 	public String mostrar() {
-		return "\n" + "{" + "Number " + ":" + this.getNumber() + ", " + "\n" + "Name " + ":" + this.getName() + ", " + "\n"
-				+ "Nickname " + ":" + this.getNickname() + ", " + "\n" + "Height " + ":" + this.getHeight() + ", "
-				+ "\n" + "Weight " + ":" + this.getWeight() + ", " + "\n" + "BirthDate " + ":" + this.getBirthdayDate()
-				+ ", " + "\n" + "Position " + ":" + this.getPosition() + ", " + "\n" + "CurrentClub " + ":"
-				+ this.getCurrentClub() + ", " + "}" + "\n";
+		return "\n" + "{" + "\n" + "Number " + ": " + this.getNumber() + ", " + "\n" + "Name " + ": " + this.getName() + ", " + "\n"
+				+ "Nickname " + ": " + this.getNickname() + ", " + "\n" + "Height " + ": " + this.getHeight() + ", "
+				+ "\n" + "Weight " + ": " + this.getWeight() + ", " + "\n" + "BirthDate " + ": " + this.getBirthdayDate()
+				+ ", " + "\n" + "Position " + ": " + this.getPosition() + ", " + "\n" + "CurrentClub " + ": "
+				+ this.getCurrentClub() + "\n" + "}" + "\n";
 	}
 
 	public Integer getAge() {
