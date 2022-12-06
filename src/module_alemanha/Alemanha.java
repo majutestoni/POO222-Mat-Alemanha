@@ -81,7 +81,7 @@ public class Alemanha implements NationalTeamInfos {
 		}
 
 		if (!finded) {
-			return "0";
+			throw new IllegalArgumentException("Jogador não encontrado");
 		}
 		return a.mostrar();
 	}

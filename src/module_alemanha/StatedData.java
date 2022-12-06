@@ -38,7 +38,7 @@ public class StatedData implements NationalTeamStats {
 		}
 
 		if (!finded) {
-			throw new IllegalArgumentException("Jogador não encontrado");
+			return 0;
 		}
 
 		return ok;
