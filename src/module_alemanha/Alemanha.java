@@ -144,8 +144,6 @@ public class Alemanha implements NationalTeamInfos {
 	
 public Alemanha() {
 		
-		statedData = new StatedData(players);
-		
 		// ADD PLAYERS
 		Player p1 = new Player("Manuel Peter Neuer", LocalDate.parse("1986-3-27"), "Neuer", 1, 193, 93, "goalkeeper", "FC Bayern München");
 		players.add(p1);
@@ -240,7 +238,8 @@ public Alemanha() {
 		TechnicalCommittee td11 = new TechnicalCommittee("Oliver Bierhoff", LocalDate.parse("1968-05-01"),
 				"Oliver Bierhoff", "Managing Director National Teams and Academy");
 		technicalCommittees.add(td11);
+		
+		statedData = new StatedData(players);
 	}
-
 
 }
