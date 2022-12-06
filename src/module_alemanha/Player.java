@@ -72,7 +72,7 @@ public class Player extends Person {
 				|| position.equals("Right Midfielder") || position.equals("Left Midfielder")
 				|| position.equals("Central Attacking Midfielder") || position.equals("Left Wing")
 				|| position.equals("Right Wing") || position.equals("Center Forward") || position.equals("Striker")) {
-			this.position = position; // fazer classe enum, me chama na sala que te ensino
+			this.position = position;
 		} else {
 			throw new IllegalArgumentException("Digite a posição do jogador");
 		}
