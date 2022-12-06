@@ -1,0 +1,64 @@
+{
+  "technicalcommittee": [
+    {
+      "Name": "Hans-Dieter Flick",
+      "Nickname": "Hansi Flick",
+      "Role": "Main coach",
+      "BirthDate": "24-02-1965"
+    },
+    {
+      "Name": "Marcus Sorg",
+      "Nickname": "Marcus Sorg",
+      "Role": "Assistant coach",
+      "BirthDate": "24-12-1965"
+    },
+    {
+      "Name": "Danny Röhl",
+      "Nickname": "Danny Röhl",
+      "Role": "Assistant coach",
+      "BirthDate": "28-04-1989"
+    },
+    {
+      "Name": "Andreas Kronenberg",
+      "Nickname": "Andreas Kronenberg",
+      "Role": "Goalkeeper coach",
+      "BirthDate": "10-09-1974"
+    },
+    {
+      "Name": "Michael Fuchs",
+      "Nickname": "Michael Fuchs",
+      "Role": "Goalkeeper coach",
+      "BirthDate": "04-01-1970"
+    },
+    {
+      "Name": "Mads Buttgereit",
+      "Nickname": "Mads Buttgereit",
+      "Role": "Standard Coach",
+      "BirthDate": "03-06-1985"
+    },
+    {
+      "Name": "Nicklas Dietrich",
+      "Nickname": "Nicklas Dietrich",
+      "Role": "Athletic Trainer",
+      "BirthDate": "13-12-1982"
+    },
+    {
+      "Name": "Krunoslav Banovcic",
+      "Nickname": "Krunoslav Banovcic",
+      "Role": "Athletic Trainer",
+      "BirthDate": "10-09-1974"
+    },
+    {
+      "Name": "Stephan Nopp",
+      "Nickname": "Stephan Nopp",
+      "Role": "Co-Trainer Match Analysis",
+      "BirthDate": "24-08-1979"
+    },
+    {
+      "Name": "Oliver Bierhoff",
+      "Nickname": "Oliver Bierhoff",
+      "Role": "Managing Director National Teams and Academy",
+      "BirthDate": "01-05-1968"
+    }
+  ]
+}

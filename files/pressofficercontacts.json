@@ -1,0 +1,20 @@
+{
+  "pressofficercontacts": [
+    {
+      "Name": "Franziska Wülle",
+      "Nickname": "Wülle",
+      "BirthDate": "1985-2-9",
+      "Telefone1": "+49 957489334",
+      "Telefone2": "+49 957243734",
+      "Email": "franwulle@dfb.de"
+    },
+    {
+      "Name": "Arne Leyenberg",
+      "Nickname": "Leyenberg",
+      "BirthDate": "1978-7-25",
+      "Telefone1": "+49 956295632",
+      "Telefone2": "+49 994733732",
+      "Email": "leyen@dfb.d"
+    }
+  ]
+}
