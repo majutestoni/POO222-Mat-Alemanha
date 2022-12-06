@@ -198,11 +198,11 @@ public Alemanha() {
 		PressOfficerContacts poc1 = new PressOfficerContacts("Maju", LocalDate.parse("2003-03-25"), "Maju",
 				"majuzinha@cbf.com", "47 8922-4224", "47 8922-4224");
 		pressOfficerContacts.add(poc1);
-		PressOfficerContacts poc2 = new PressOfficerContacts("Franziska Wülle", LocalDate.parse("1985-02-09"), "Wülle",
-				"+49 957489334", "+49 957243734", "franwulle@dfb.de");
+		PressOfficerContacts poc2 = new PressOfficerContacts("Franziska Wülle", LocalDate.parse("1985-02-09"), "Wülle", 
+				"franwulle@dfb.de", "+49 957489334", "+49 957243734");
 		pressOfficerContacts.add(poc2);
 		PressOfficerContacts poc3 = new PressOfficerContacts("Arne Leyenberg", LocalDate.parse("1978-07-25"),
-				"Leyenberg", "+49 956295632", "+49 994733732", "leyen@dfb.d");
+				"Leyenberg", "leyen@dfb.d", "+49 956295632", "+49 994733732");
 		pressOfficerContacts.add(poc3);
 
 		// ADD TECHNICALCOMMITTEE
