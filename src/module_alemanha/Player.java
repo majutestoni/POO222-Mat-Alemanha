@@ -66,12 +66,12 @@ public class Player extends Person {
 	}
 
 	public void setPosition(String position) {
-		if (position != null && position.equals("Goalkeeper") || position.equals("Central Back")
-				|| position.equals("Right Back") || position.equals("Left Back")
-				|| position.equals("Central Defensive Midfielder") || position.equals("Central Midfielder")
-				|| position.equals("Right Midfielder") || position.equals("Left Midfielder")
-				|| position.equals("Central Attacking Midfielder") || position.equals("Left Wing")
-				|| position.equals("Right Wing") || position.equals("Center Forward") || position.equals("Striker")) {
+		if (position != null && position.equals("goalkeeper") || position.equals("central back")
+				|| position.equals("right back") || position.equals("left back")
+				|| position.equals("central defensive midfielder") || position.equals("central midfielder")
+				|| position.equals("right midfielder") || position.equals("left midfielder")
+				|| position.equals("central attacking midfielder") || position.equals("left wing")
+				|| position.equals("right wing") || position.equals("center forward") || position.equals("striker")) {
 			this.position = position;
 		} else {
 			throw new IllegalArgumentException("Digite a posição do jogador");
